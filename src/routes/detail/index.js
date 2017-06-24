@@ -77,7 +77,7 @@ export default class Detail extends Component {
 
     render() {
 		return (
-			<div class={style.header}>
+			<div class={style.detail}>
 				<h1>Detail: {this.state.name}</h1>
                 <img src={this.state.image} />
 			</div>
