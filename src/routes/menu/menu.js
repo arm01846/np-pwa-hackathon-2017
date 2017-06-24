@@ -1,9 +1,9 @@
-{
-    "menu": [
+export const menu = {
+    menu: [
         {
             "name": "เอสเปรสโซ่",
             "link": "espresso",
-            "image": "https://globalassets.starbucks.com/assets/b0525676a0194652be7f4993210b381a.jpg",
+            "image": "globalassets.starbucks.com/assets/b0525676a0194652be7f4993210b381a.jpg",
             "ingredients": ["กาแฟ"],
             "size": [
                 {
@@ -74,7 +74,7 @@
         }, {
             "name": "คาเฟ่ อเมริกาโน่",
             "link": "americano",
-            "image": "https://globalassets.starbucks.com/assets/2a4807223b53455b89f792b5e25ce89e.jpg",
+            "image": "globalassets.starbucks.com/assets/2a4807223b53455b89f792b5e25ce89e.jpg",
             "ingredients": ["กาแฟ", "น้ำ"],
             "size": [
                 {
@@ -145,7 +145,7 @@
         }, {
             "name": "ไอซ์ คาเฟ่ อเมริกาโน่",
             "link": "iced_americano",
-            "image": "https://globalassets.starbucks.com/assets/b13f65bbf932437ca42712fd07d1306a.jpg",
+            "image": "globalassets.starbucks.com/assets/b13f65bbf932437ca42712fd07d1306a.jpg",
             "ingredients": ["กาแฟ", "น้ำ", "น้ำแข็ง"],
             "size": [
                 {
@@ -200,7 +200,7 @@
         }, {
             "name": "คาเฟ่ ลาเต้",
             "link": "latte",
-            "image": "https://globalassets.starbucks.com/assets/0aec516c617c4df7904452542ab706b6.jpg",
+            "image": "globalassets.starbucks.com/assets/0aec516c617c4df7904452542ab706b6.jpg",
             "ingredients": ["กาแฟ", "นม"],
             "size": [
                 {
@@ -351,7 +351,7 @@
         }, {
             "name": "ไอซ์ คาเฟ่ ลาเต้",
             "link": "iced_latte",
-            "image": "https://globalassets.starbucks.com/assets/ac689c2c59a145078f257e5cb28a33ab.jpg",
+            "image": "globalassets.starbucks.com/assets/ac689c2c59a145078f257e5cb28a33ab.jpg",
             "ingredients": ["กาแฟ", "นม", "น้ำแข็ง"],
             "size": [
                 {
