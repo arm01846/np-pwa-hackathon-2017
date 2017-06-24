@@ -69,9 +69,15 @@ export default class Detail extends Component {
 		return (
 			<div class={style.detail} style={this.style}>
                 <Card class={style.nutrition}>
-                    <CardTitle style={{height: '45%', width: '100%', margin: '0 auto'}}>
-                        {this.state.name}
+                    <CardTitle style={{height: '45%', width: '100%', margin: '0 auto', position: 'relative', flexDirection: 'column', backgroundColor: 'rgb(200,200,200)', padding: '0'}}>
+                        { this.state.ingredients.map((ingredient) => {
+                            return <div style={{ width: '20vh', flex: '1',display: 'flex', backgroundColor: 'brown' }}
+                            ><strong style={{ alignSelf: 'center', flex: '1', textAlign: 'center', fontSize: '0.7rem' }}>{ingredient}</strong></div>
+                        })}
+                        <div style={{ backgroundImage: `url(/assets/images/water-front.png)`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: 'center', position: 'absolute', width: '100%',height: '100%' }}>
+                        </div>
                     </CardTitle>
+                    {this.state.name}
                     <div>
                         พลังงาน
                         <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
