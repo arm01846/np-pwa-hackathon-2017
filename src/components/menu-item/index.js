@@ -12,7 +12,7 @@ export default class MenuItem extends Component {
             <Link href={'/detail/' + this.props.coffee.link} style={{ display: 'block', width: '100%' }}>
             <div class={style.menuItem}>
                 <div style={{ float: 'left' }}>
-                    <img alt={ this.props.coffee.brand } style={{ width: '88px', height: '88px', padding: '10px' }} src={ "/assets/logo/" + this.props.coffee.brand + ".png" }/>
+                    <img alt={ this.props.coffee.brand } style={{ width: '88px', height: '88px', padding: '10px' }} src={ "/assets/logo/" + this.props.coffee.brand + ".webp" }/>
                 </div>
                 
                 <div>
