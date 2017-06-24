@@ -9,8 +9,18 @@ export default class Menu extends Component {
 		return (
 			<div class={style.menu}>
 				<List>
-					{ ["coffee1", "coffee2", "coffee3"].map((val) => {
-						return <MenuItem name={val}></MenuItem>
+					{ [{
+						name: 'coffee1',
+						link: 'c1'
+						}, {
+						name: 'coffee2',
+						link: 'c2'
+						}, {
+						name: 'coffee3',
+						link: 'c3'
+						}
+					].map((coffee) => {
+						return <MenuItem name={coffee.name} link={coffee.link}></MenuItem>
 					}) }
 				</List>
 			</div>
