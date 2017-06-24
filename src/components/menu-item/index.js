@@ -10,7 +10,7 @@ export default class MenuItem extends Component {
     render() {
         return (
             <Link href={'/detail/' + this.props.link}>
-            <div style={{ width: '100%', height: '100px', display: 'flex', margin: '8px', 'background-color': '#007143' }}>
+            <div class={style.menuItem}>
                 <div>
                     <img style={{ width: '100px', height: '100px' }} src={ this.props.image }/>
                 </div>
