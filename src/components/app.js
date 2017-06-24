@@ -2,9 +2,9 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
-import Home from '../routes/home';
-import Profile from '../routes/profile';
-// import Home from 'async!./home';
+import Menu from '../routes/menu';
+import Detail from '../routes/detail';
+// import Menu from 'async!./menu';
 // import Profile from 'async!./profile';
 
 export default class App extends Component {
@@ -21,9 +21,9 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
+					<Menu path="/" />
+					<Detail path="/detail/:coffee" size="short" />
+					<Detail path="/detail/:coffee/:size" />
 				</Router>
 			</div>
 		);
