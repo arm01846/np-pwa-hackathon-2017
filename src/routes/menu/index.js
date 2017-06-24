@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 import mdl from 'material-design-lite/material';
-import { List, ListItem, ListItemContent, Card, CardTitle } from 'preact-mdl';
+import { Card, CardTitle } from 'preact-mdl';
 import MenuItem from '../../components/menu-item';
 
 import { menu } from './menu';

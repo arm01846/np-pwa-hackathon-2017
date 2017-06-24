@@ -1,8 +1,6 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style';
-import mdl from 'material-design-lite/material';
-import { Chip } from 'preact-mdl';
 
 export default class MenuItem extends Component {
     constructor(props) {
