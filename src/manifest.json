@@ -1,6 +1,6 @@
 {
-  "name": "Starbuck Menu (Unofficial)",
-  "short_name": "Starbuck Menu",
+  "name": "Coffee Handbook",
+  "short_name": "np-coffee",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
