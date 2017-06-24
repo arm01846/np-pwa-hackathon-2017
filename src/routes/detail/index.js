@@ -69,7 +69,7 @@ export default class Detail extends Component {
 		return (
 			<div class={style.detail} style={this.style}>
                 <Card class={style.nutrition}>
-                    <CardTitle style={{height: '45%', width: '100%', margin: '0 auto', position: 'relative', flexDirection: 'column', backgroundColor: 'rgb(200,200,200)', padding: '0'}}>
+                    <CardTitle class={style.cardtitle}>
                         { this.state.ingredients.map((ingredient) => {
                             return <div style={{ width: '20vh', flex: '1',display: 'flex', backgroundColor: 'brown' }}
                             ><strong style={{ alignSelf: 'center', flex: '1', textAlign: 'center', fontSize: '0.7rem' }}>{ingredient}</strong></div>
