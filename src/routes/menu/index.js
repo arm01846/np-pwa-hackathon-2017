@@ -3,31 +3,46 @@ import style from './style';
 import mdl from 'material-design-lite/material';
 import { List, ListItem, Spinner } from 'preact-mdl';
 import MenuItem from '../../components/menu-item';
+import config from './config';
 
 export default class Menu extends Component {
 	
 	constructor(props) {
 		super(props);
 		this.state = {
-			menu: []
-		}
+			menus: []
+		};
 	}
 
 	componentDidMount() {
-		fetch('https://np-pwa-hackathon-2017.firebaseio.com/menu.json')
+		fetch(config.domain + '/menu.json?shallow=true')
 			.then((resp) => resp.json())
-			.then((menu) => this.setState({ menu }));
+			.then((menus) => Object.keys(menus).map((id) => {
+				return { id: id };
+			}))
+			.then((menus) => {
+				this.setState({ menus });
+				return menus;
+			})
+			.then((menus) => menus.map((menu) => {
+				fetch(config.domain + '/menu/' + menu.id + '.json')
+					.then((data) => data.json())
+					.then((data) => {
+						this.state.menus[menu.id] = data;
+						this.setState({ menus });
+					});
+			}));
 	}
 
-	render({}, { menu }) {
+	render({}, { menus }) {
 		return (
 			<div class={style.menu}>
-				{ !menu || menu.length === 0 ? (
-					<Spinner active={true}
-						class={style.spinner}/>
+				{ !menus || menus.length === 0 ? (
+					<Spinner active
+						class={style.spinner} />
 				):(
-					<List style={{ margin: '0' }}>	
-					{ menu.map((coffee) => {
+					<List style={{ margin: '0' }}>
+					{ menus.map((coffee) => {
 						return <ListItem three-line class={style.listItem} >
 							<MenuItem coffee={coffee}></MenuItem>
 						</ListItem>
