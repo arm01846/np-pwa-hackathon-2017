@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
-import { Card, CardTitle, Progress, ProgressProps } from 'preact-mdl';
+import { Card, CardTitle } from 'preact-mdl';
+import Progress from '../../components/progress'
 
 export default class Detail extends Component {
     state = {
@@ -71,42 +72,19 @@ export default class Detail extends Component {
                 <Card class={style.nutrition}>
                     <CardTitle class={style.cardtitle}>
                         { this.state.ingredients.map((ingredient) => {
-                            return <div style={{ width: '20vh', flex: '1',display: 'flex', backgroundColor: 'brown' }}
+                            return <div style={{ width: '20vh', flex: '1',display: 'flex', backgroundColor: '#4d2c11' }}
                             ><strong style={{ alignSelf: 'center', flex: '1', textAlign: 'center', fontSize: '0.7rem' }}>{ingredient}</strong></div>
                         })}
                         <div style={{ backgroundImage: `url(/assets/images/water-front.png)`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: 'center', position: 'absolute', width: '100%',height: '100%' }}>
                         </div>
                     </CardTitle>
-                    {this.state.name}
-                    <div>
-                        พลังงาน
-                        <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
-                            <div style={{height: '100%', position: 'absolute', width: `${this.state.percentCalories}%`, backgroundColor: 'green'}}></div>
-                        </div>
-                    </div>
-                    <div>
-                        ไขมัน
-                        <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
-                            <div style={{height: '100%', position: 'absolute', width: `${this.state.percentFat}%`, backgroundColor: 'green'}}></div>
-                        </div>
-                    </div>
-                    <div>
-                        น้ำตาล
-                        <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
-                            <div style={{height: '100%', position: 'absolute', width: `${this.state.percentSugar}%`, backgroundColor: 'green'}}></div>
-                        </div>
-                    </div>
-                    <div>
-                        โปรตีน
-                        <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
-                            <div style={{height: '100%', position: 'absolute', width: `${this.state.percentProtein}%`, backgroundColor: 'green'}}></div>
-                        </div>
-                    </div>
-                    <div>
-                        คาเฟอีน
-                        <div style={{height: '10px', width: '100px', position: 'relative', backgroundColor: 'rgba(100, 100, 100, 0.4)'}}>
-                            <div style={{height: '100%', position: 'absolute', width: `${this.state.percentCaffeine}%`, backgroundColor: 'green'}}></div>
-                        </div>
+                    <span class={style.contenttitle}>{this.state.name}</span>
+                    <div style={{display: 'flex', flexDirection: 'column', height: '40%'}}>
+                        <Progress label="พลังงาน" value={this.state.percentCalories}></Progress>
+                        <Progress label="ไขมัน" value={this.state.percentFat}></Progress>
+                        <Progress label="น้ำตาล" value={this.state.percentSugar}></Progress>
+                        <Progress label="โปรตีน" value={this.state.percentProtein}></Progress>
+                        <Progress label="คาเฟอีน" value={this.state.percentCaffeine}></Progress>
                     </div>
                 </Card>
 			</div>
