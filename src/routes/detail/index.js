@@ -73,7 +73,7 @@ export default class Detail extends Component {
                     <CardTitle class={style.cardtitle}>
                         { this.state.ingredients.map((ingredient) => {
                             return <div style={{ width: '20vh', flex: '1',display: 'flex', backgroundColor: '#4d2c11' }}
-                            ><strong style={{ alignSelf: 'center', flex: '1', textAlign: 'center', fontSize: '0.7rem' }}>{ingredient}</strong></div>
+                            ><strong style={{ alignSelf: 'center', flex: '1', textAlign: 'center', fontSize: '1rem',     letterSpacing: '1.5px', color: 'lightgray' }}>{ingredient}</strong></div>
                         })}
                         <div style={{ backgroundImage: `url(/assets/images/water-front.png)`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: 'center', position: 'absolute', width: '100%',height: '100%' }}>
                         </div>
