@@ -9,23 +9,22 @@ export default class MenuItem extends Component {
 
     render() {
         return (
-            <Link href={'/detail/' + this.props.link}>
+            <Link href={'/detail/' + this.props.coffee.link} style={{ display: 'block', width: '100%' }}>
             <div class={style.menuItem}>
-                <div>
-                    <img alt={ this.props.name } style={{ width: '100px', height: '100px' }} src={ this.props.image }/>
+                <div style={{ float: 'left' }}>
+                    <img alt={ this.props.coffee.brand } style={{ width: '88px', height: '88px', padding: '10px' }} src={ "/assets/logo/" + this.props.coffee.brand + ".png" }/>
                 </div>
+                
                 <div>
-                    <div style={{ height: '40px', lineHeight: '40px', 'font-size': '1.25em', color: '#007143' }} class={style.displayContent}>{ this.props.name }</div>
-                    
-                    <div style={{ height: '60px', lineHeight: '60px' }} class={style.displayContent}>
-                        { this.props.size.map((size) => {
-                            return <Link href={'/detail/' + this.props.link + '/' + size.name}
-                                style={{ padding: '5px 12px', margin: '0px 8px', color: '#fefefe', 'background-color': '#007143' }}
-                            ><strong>{size.name}</strong></Link>
-                        })}
+                    <div style={{ height: '40px', lineHeight: '40px', 'font-size': '1.25em', color: '#007143', display: 'block' }} class={style.displayContent}>
+                        { this.props.coffee.name }
                     </div>
                     
+                    <div class={style.displayContent}>
+                        { this.props.coffee.description }
+                    </div>
                 </div>
+               
             </div>  
             </Link>
         );
