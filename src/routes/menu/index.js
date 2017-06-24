@@ -4,14 +4,26 @@ import mdl from 'material-design-lite/material';
 import { List, ListItem } from 'preact-mdl';
 import MenuItem from '../../components/menu-item';
 
-import { menu } from './menu';
-
 export default class Menu extends Component {
-	render() {
+	
+	constructor(props) {
+		super(props);
+		this.state = {
+			menu: []
+		}
+	}
+
+	componentDidMount() {
+		fetch('https://np-pwa-hackathon-2017.firebaseio.com/menu.json')
+			.then((resp) => resp.json())
+			.then((menu) => this.setState({ menu }));
+	}
+
+	render({}, { menu }) {
 		return (
 			<div class={style.menu}>
 				<List style={{ margin: '0' }}>	
-				{ menu.menu.map((coffee) => {
+				{ menu.map((coffee) => {
 					return <ListItem three-line class={style.listItem} >
 						<MenuItem coffee={coffee}></MenuItem>
 					</ListItem>
