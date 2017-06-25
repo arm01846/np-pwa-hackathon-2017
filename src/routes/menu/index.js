@@ -15,7 +15,6 @@ export default class Menu extends Component {
 	}
 
 	componentDidMount() {
-		console.log(config);
 		fetch(config.domain + '/menu.json?shallow=true')
 			.then((resp) => resp.json())
 			.then((menus) => Object.keys(menus).map((id) => {
@@ -42,7 +41,7 @@ export default class Menu extends Component {
 					<Spinner active
 						class={style.spinner} />
 				):(
-					<List style={{ margin: '0' }}>
+					<List style={{ margin: '0', padding: '0' }}>
 					{ menus.map((coffee, index) => {
 						return <ListItem three-line class={style.listItem} >
 							<MenuItem coffee={coffee} id={index}></MenuItem>

@@ -16,11 +16,11 @@ export default class MenuItem extends Component {
                 </div>
                 
                 <div>
-                    <div style={{ height: '40px', lineHeight: '40px', 'font-size': '1.25em', color: '#007143', display: 'block' }} class={style.displayContent}>
+                    <div class={style.mainDisplayContent}>
                         { this.props.coffee.name }
                     </div>
                     
-                    <div class={style.displayContent}>
+                    <div class={style.subDisplayContent}>
                         { this.props.coffee.description }
                     </div>
                 </div>
