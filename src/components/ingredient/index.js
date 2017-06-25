@@ -17,6 +17,8 @@ export default class Ingredient extends Component {
                 return <Mocha/>;
             case 'วิปครีม':
                 return <WhippedCream/>;
+            case 'คาราเมล':
+                return <Caramel/>;
             default:
                 return null;
         }
@@ -102,6 +104,18 @@ class WhippedCream extends BaseIngredient {
     render() {
         return (
             <BaseIngredient bgcolor='white' fgcolor='darkgray' name='วิปครีม'></BaseIngredient>
+        );
+    }
+}
+
+class Caramel extends BaseIngredient {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <BaseIngredient bgcolor='#d87f2b' fgcolor='black' name='คาราเมล'></BaseIngredient>
         );
     }
 }
