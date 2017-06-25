@@ -9,7 +9,7 @@ export default class Progress extends Component {
     render() {
         return (
             <div class={style.container}>
-                <span style={{display: 'inline-block', width: '100px'}}>{this.props.label}</span>
+                <span style={{display: 'inline-block', minWidth: '80px'}}>{this.props.label}</span>
                 <div class={style.bufferbar}>
                     <div class={style.progressbar} style={{width: `${this.props.value}%`, backgroundColor: `${this.props.color}`}}></div>
                 </div>
