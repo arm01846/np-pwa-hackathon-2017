@@ -18,7 +18,7 @@ export default class Menu extends Component {
 		fetch(config.domain + '/menu.json?shallow=true')
 			.then((resp) => resp.json())
 			.then((menus) => Object.keys(menus).map((id) => {
-				return { id: id };
+				return { id: id, brand: 'nologo' };
 			}))
 			.then((menus) => {
 				this.setState({ menus });
