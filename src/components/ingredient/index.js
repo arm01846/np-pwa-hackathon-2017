@@ -13,6 +13,10 @@ export default class Ingredient extends Component {
                 return <Milk/>;
             case 'วนิลา':
                 return <Vanilla/>;
+            case 'มอคค่า':
+                return <Mocha/>;
+            case 'วิปครีม':
+                return <WhippedCream/>;
             default:
                 return null;
         }
@@ -76,4 +80,28 @@ class Vanilla extends BaseIngredient {
 			<BaseIngredient bgcolor='wheat' fgcolor='darkgray' name='วนิลา'></BaseIngredient>
 		);
 	}
+}
+
+class Mocha extends BaseIngredient {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <BaseIngredient bgcolor='#362314' fgcolor='lightgray' name='มอคค่า'></BaseIngredient>
+        );
+    }
+}
+
+class WhippedCream extends BaseIngredient {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <BaseIngredient bgcolor='white' fgcolor='darkgray' name='วิปครีม'></BaseIngredient>
+        );
+    }
 }

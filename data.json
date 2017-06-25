@@ -209,7 +209,7 @@
             "background": "latte-blur.jpg",
             "link": "latte",
             "brand": "starbucks",
-            "ingredients": ["กาแฟ", "นม"],
+            "ingredients": ["นม", "กาแฟ"],
             "size": [
                 {
                     "name": "Short",
@@ -362,7 +362,7 @@
             "background": "iced-latte-blur.jpg",
             "link": "iced_latte",
             "brand": "starbucks",
-            "ingredients": ["กาแฟ", "นม", "น้ำแข็ง"],
+            "ingredients": ["นม", "กาแฟ", "น้ำแข็ง"],
             "size": [
                 {
                     "name": "Tall",
@@ -474,12 +474,282 @@
                 }
             ]
         }, {
+            "name": "คาเฟ่ มอคค่า",
+            "description": "เอสเปรสโซ่ + นม + มอคค่า ซอส + วิปครีม",
+            "background": "mocha-blur.jpg",
+            "link": "mocha",
+            "brand": "starbucks",
+            "ingredients": ["วิปครีม", "นม", "มอคค่า", "กาแฟ"],
+            "size": [
+                {
+                    "name": "Short",
+                    "volume": 8,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 210,
+                                "fat": 11,
+                                "sugar": 18,
+                                "protein": 7,
+                                "caffeine": 90
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 180,
+                                "fat": 6,
+                                "sugar": 18,
+                                "protein": 7,
+                                "caffeine": 90
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 200,
+                                "fat": 9,
+                                "sugar": 18,
+                                "protein": 6,
+                                "caffeine": 90
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Tall",
+                    "volume": 12,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 310,
+                                "fat": 16,
+                                "sugar": 28,
+                                "protein": 10,
+                                "caffeine": 95
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 250,
+                                "fat": 8,
+                                "sugar": 28,
+                                "protein": 11,
+                                "caffeine": 95
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 290,
+                                "fat": 11,
+                                "sugar": 28,
+                                "protein": 9,
+                                "caffeine": 95
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Grande",
+                    "volume": 16,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 400,
+                                "fat": 19,
+                                "sugar": 35,
+                                "protein": 13,
+                                "caffeine": 175
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 320,
+                                "fat": 10,
+                                "sugar": 36,
+                                "protein": 14,
+                                "caffeine": 175
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 360,
+                                "fat": 14,
+                                "sugar": 36,
+                                "protein": 12,
+                                "caffeine": 175
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Venti",
+                    "volume": 20,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 490,
+                                "fat": 23,
+                                "sugar": 45,
+                                "protein": 17,
+                                "caffeine": 185
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 390,
+                                "fat": 10,
+                                "sugar": 45,
+                                "protein": 18,
+                                "caffeine": 185
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 450,
+                                "fat": 16,
+                                "sugar": 45,
+                                "protein": 15,
+                                "caffeine": 185
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "name": "ไอซ์ คาเฟ่ มอคค่า",
+            "description": "เอสเปรสโซ่ + นม + มอคค่า ซอส + น้ำแข็ง + วิปครีม",
+            "background": "iced-mocha-blur.jpg",
+            "link": "iced_mocha",
+            "brand": "starbucks",
+            "ingredients": ["วิปครีม", "น้ำแข็ง", "นม", "มอคค่า", "กาแฟ"],
+            "size": [
+                {
+                    "name": "Tall",
+                    "volume": 12,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 270,
+                                "fat": 14,
+                                "sugar": 23,
+                                "protein": 7,
+                                "caffeine": 95
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 240,
+                                "fat": 10,
+                                "sugar": 23,
+                                "protein": 7,
+                                "caffeine": 95
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 260,
+                                "fat": 12,
+                                "sugar": 24,
+                                "protein": 7,
+                                "caffeine": 95
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Grande",
+                    "volume": 16,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 360,
+                                "fat": 19,
+                                "sugar": 30,
+                                "protein": 9,
+                                "caffeine": 175
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 260,
+                                "fat": 14,
+                                "sugar": 30,
+                                "protein": 10,
+                                "caffeine": 175
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 350,
+                                "fat": 16,
+                                "sugar": 31,
+                                "protein": 9,
+                                "caffeine": 175
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Venti",
+                    "volume": 24,
+                    "variations": [
+                        {
+                            "name": "นมสด",
+                            "nutrition": {
+                                "calories": 470,
+                                "fat": 22,
+                                "sugar": 43,
+                                "protein": 13,
+                                "caffeine": 265
+                            }
+                        },
+                        {
+                            "name": "นมพร่องมันเนย",
+                            "nutrition": {
+                                "calories": 410,
+                                "fat": 15,
+                                "sugar": 43,
+                                "protein": 14,
+                                "caffeine": 265
+                            }
+                        },
+                        {
+                            "name": "นมถั่วเหลือง",
+                            "nutrition": {
+                                "calories": 450,
+                                "fat": 18,
+                                "sugar": 44,
+                                "protein": 12,
+                                "caffeine": 265
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, {
             "name": "ไอซ์ วนิลา ลาเต้",
             "description": "เอสเปรสโซ่ + นม + น้ำเชื่อมกลิ่นวนิลา + น้ำแข็ง",
             "background": "iced-vanilla-latte-blur.jpg",
             "link": "iced_vanilla_latte",
             "brand": "starbucks",
-            "ingredients": ["กาแฟ", "นม", "วนิลา", "น้ำแข็ง"],
+            "ingredients": ["น้ำแข็ง", "นม", "วนิลา", "กาแฟ"],
             "size": [
                 {
                     "name": "Tall",
