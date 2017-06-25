@@ -11,6 +11,8 @@ export default class Ingredient extends Component {
                 return <Coffee/>;
             case 'นม':
                 return <Milk/>;
+            case 'วนิลา':
+                return <Vanilla/>;
             default:
                 return null;
         }
@@ -60,6 +62,18 @@ class Milk extends BaseIngredient {
     render() {
 		return (
 			<BaseIngredient bgcolor='#f8edd8' fgcolor='darkgray' name='นมสด'></BaseIngredient>
+		);
+	}
+}
+
+class Vanilla extends BaseIngredient {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+		return (
+			<BaseIngredient bgcolor='wheat' fgcolor='darkgray' name='วนิลา'></BaseIngredient>
 		);
 	}
 }
