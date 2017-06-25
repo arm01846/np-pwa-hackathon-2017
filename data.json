@@ -2,7 +2,7 @@
     "menu": [
         {
             "name": "เอสเปรสโซ่",
-            "description": "description",
+            "description": "ชงโดยใช้แรงอัดไอน้ำหรือน้ำร้อนผ่านเมล็ดกาแฟคั่วที่่บดละเอียด",
             "link": "espresso",
             "brand": "starbucks",
             "ingredients": ["กาแฟ"],
@@ -74,7 +74,7 @@
             ]
         }, {
             "name": "คาเฟ่ อเมริกาโน่",
-            "description": "description",
+            "description": "เอสเปรสโซ่ + น้ำร้อน",
             "link": "americano",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "น้ำ"],
@@ -146,7 +146,7 @@
             ]
         }, {
             "name": "ไอซ์ คาเฟ่ อเมริกาโน่",
-            "description": "description",
+            "description": "เอสเปรสโซ่ + น้ำร้อน + น้ำแข็ง",
             "link": "iced_americano",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "น้ำ", "น้ำแข็ง"],
@@ -202,7 +202,7 @@
             ]
         }, {
             "name": "คาเฟ่ ลาเต้",
-            "description": "description",
+            "description": "เอสเปรสโซ่ + นม",
             "link": "latte",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "นม"],
@@ -354,7 +354,7 @@
             ]
         }, {
             "name": "ไอซ์ คาเฟ่ ลาเต้",
-            "description": "description",
+            "description": "เอสเปรสโซ่ + นม + น้ำแข็ง",
             "link": "iced_latte",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "นม", "น้ำแข็ง"],
