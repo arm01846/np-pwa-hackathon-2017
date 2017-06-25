@@ -81,9 +81,11 @@ export default class Detail extends Component {
                         <TabPanel id="size" class='is-active'>
                             <Card class={style.nutrition}>
                                 <CardTitle class={style.cardtitle}>
-                                    { this.state.ingredients.map((ingredient) => {
-                                        return <Ingredient value={ingredient}></Ingredient>
-                                    })}
+                                    <div style={{display: 'flex', flexDirection: 'column', height: '80%', margin: 'auto'}}>
+                                        { this.state.ingredients.map((ingredient) => {
+                                            return <Ingredient value={ingredient}></Ingredient>
+                                        })}
+                                    </div>
                                     <div class={style.glassmask}></div>
                                 </CardTitle>
                                 <span class={style.contenttitle}>{this.state.name}</span>
