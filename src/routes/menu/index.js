@@ -35,12 +35,9 @@ export default class Menu extends Component {
 	}
 
 	render({}, { menus }) {
-		return (
-			<div class={style.menu}>
-				{ !menus || menus.length === 0 ? (
-					<Spinner active
-						class={style.spinner} />
-				):(
+		if (menus && menus.length !== 0) {
+			return (
+				<div class={style.menu}>
 					<List style={{ margin: '0', padding: '0' }}>
 					{ menus.map((coffee, index) => {
 						return <ListItem three-line class={style.listItem} >
@@ -48,8 +45,12 @@ export default class Menu extends Component {
 						</ListItem>
 					}) }
 					</List>
-				)}
-			</div>
+				</div>
+			);
+		} 
+		return (
+			<Spinner active
+				class={style.spinner} />
 		);
 	}
 }
