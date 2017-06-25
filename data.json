@@ -78,6 +78,7 @@
             "description": "เอสเปรสโซ่ + น้ำร้อน",
             "link": "americano",
             "brand": "starbucks",
+            "background": "americano-blur.jpg",
             "ingredients": ["กาแฟ", "น้ำ"],
             "size": [
                 {
@@ -148,6 +149,7 @@
         }, {
             "name": "ไอซ์ คาเฟ่ อเมริกาโน่",
             "description": "เอสเปรสโซ่ + น้ำร้อน + น้ำแข็ง",
+            "background": "iced-americano-blur.jpg",
             "link": "iced_americano",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "น้ำ", "น้ำแข็ง"],
