@@ -206,6 +206,7 @@
         }, {
             "name": "คาเฟ่ ลาเต้",
             "description": "เอสเปรสโซ่ + นม",
+            "background": "latte-blur.jpg",
             "link": "latte",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "นม"],
@@ -358,6 +359,7 @@
         }, {
             "name": "ไอซ์ คาเฟ่ ลาเต้",
             "description": "เอสเปรสโซ่ + นม + น้ำแข็ง",
+            "background": "iced-latte-blur.jpg",
             "link": "iced_latte",
             "brand": "starbucks",
             "ingredients": ["กาแฟ", "นม", "น้ำแข็ง"],
