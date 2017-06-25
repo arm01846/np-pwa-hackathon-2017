@@ -5,6 +5,7 @@
             "description": "ชงโดยใช้แรงอัดไอน้ำหรือน้ำร้อนผ่านเมล็ดกาแฟคั่วที่่บดละเอียด",
             "link": "espresso",
             "brand": "starbucks",
+            "background": "espresso-blur.jpg",
             "ingredients": ["กาแฟ"],
             "size": [
                 {
