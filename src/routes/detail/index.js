@@ -1,32 +1,23 @@
 import { h, Component } from 'preact';
 import style from './style';
-import { Card, CardTitle } from 'preact-mdl';
+import mdl from 'material-design-lite/material';
+import { Card, CardTitle, Spinner } from 'preact-mdl';
 import Progress from '../../components/progress';
 import Ingredient from '../../components/ingredient';
+import config from '../../config';
 
 export default class Detail extends Component {
-    state = {
-        name: "เอสเปรสโซ่",
-        image: "https://globalassets.starbucks.com/assets/b0525676a0194652be7f4993210b381a.jpg",
-        background: "espresso-blur.jpg",
-        ingredients: ["กาแฟ"],
-        sizeName: "Solo",
-        volume: 1,
-        optionName: "",
-        calories: 6.3,
-        percentCalories: 0,
-        fat: 0,
-        percentFat: 0,
-        sugar: 0,
-        percentSugar: 0,
-        protein: 0.5,
-        percentProtein: 0,
-        caffeine: 93.8,
-        percentCaffeine: 0
+    
+    constructor(props) {
+        super(props);
+        this.state = {};
     }
 
     componentDidMount() {
 		this.calculate_percent();
+        fetch(config.domain + '/menu/' + this.props.id + '.json')
+            .then((data) => data.json())
+            .then((data) => this.setState(data));
 	}
 
     calculate_percent = () => {
@@ -62,25 +53,31 @@ export default class Detail extends Component {
     }
 
     render() {
-		return (
-			<div class={style.detail} style={{ backgroundImage: `url(/assets/images/${this.state.background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-                <Card class={style.nutrition}>
-                    <CardTitle class={style.cardtitle}>
-                        { this.state.ingredients.map((ingredient) => {
-                            return <Ingredient value={ingredient}></Ingredient>
-                        })}
-                        <div class={style.glassmask}></div>
-                    </CardTitle>
-                    <span class={style.contenttitle}>{this.state.name}</span>
-                    <div style={{display: 'flex', flexDirection: 'column', height: '40%'}}>
-                        <Progress label='พลังงาน' value={this.state.percentCalories}></Progress>
-                        <Progress label='ไขมัน' value={this.state.percentFat}></Progress>
-                        <Progress label='น้ำตาล' value={this.state.percentSugar}></Progress>
-                        <Progress label='โปรตีน' value={this.state.percentProtein}></Progress>
-                        <Progress label='คาเฟอีน' value={this.state.percentCaffeine}></Progress>
-                    </div>
-                </Card>
-			</div>
-		);
+        if(this.state.name) {
+            return (
+                <div class={style.detail} style={{ backgroundImage: `url(/assets/images/${this.state.background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+                    <Card class={style.nutrition}>
+                        <CardTitle class={style.cardtitle}>
+                            { this.state.ingredients.map((ingredient) => {
+                                return <Ingredient value={ingredient}></Ingredient>
+                            })}
+                            <div class={style.glassmask}></div>
+                        </CardTitle>
+                        <span class={style.contenttitle}>{this.state.name}</span>
+                        <div style={{display: 'flex', flexDirection: 'column', height: '40%'}}>
+                            <Progress label='พลังงาน' value={this.state.percentCalories}></Progress>
+                            <Progress label='ไขมัน' value={this.state.percentFat}></Progress>
+                            <Progress label='น้ำตาล' value={this.state.percentSugar}></Progress>
+                            <Progress label='โปรตีน' value={this.state.percentProtein}></Progress>
+                            <Progress label='คาเฟอีน' value={this.state.percentCaffeine}></Progress>
+                        </div>
+                    </Card>
+                </div>
+            );
+        } 
+        return (
+            <Spinner active
+                class={style.spinner} />
+        );
 	}
 }

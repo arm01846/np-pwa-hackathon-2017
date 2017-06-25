@@ -3,7 +3,7 @@ import style from './style';
 import mdl from 'material-design-lite/material';
 import { List, ListItem, Spinner } from 'preact-mdl';
 import MenuItem from '../../components/menu-item';
-import config from './config';
+import config from '../../config';
 
 export default class Menu extends Component {
 	
@@ -15,6 +15,7 @@ export default class Menu extends Component {
 	}
 
 	componentDidMount() {
+		console.log(config);
 		fetch(config.domain + '/menu.json?shallow=true')
 			.then((resp) => resp.json())
 			.then((menus) => Object.keys(menus).map((id) => {
@@ -42,9 +43,9 @@ export default class Menu extends Component {
 						class={style.spinner} />
 				):(
 					<List style={{ margin: '0' }}>
-					{ menus.map((coffee) => {
+					{ menus.map((coffee, index) => {
 						return <ListItem three-line class={style.listItem} >
-							<MenuItem coffee={coffee}></MenuItem>
+							<MenuItem coffee={coffee} id={index}></MenuItem>
 						</ListItem>
 					}) }
 					</List>

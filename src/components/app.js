@@ -22,8 +22,7 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<Menu path="/" />
-					<Detail path="/detail/:coffee" size="short" />
-					<Detail path="/detail/:coffee/:size" />
+					<Detail path="/detail/:id" />
 				</Router>
 			</div>
 		);
